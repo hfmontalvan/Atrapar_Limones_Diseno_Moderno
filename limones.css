@@ -1,0 +1,50 @@
+:root {
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: #0b1025;
+  color: #f8fafc;
+}
+* { box-sizing: border-box; }
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 38px 18px;
+  background: radial-gradient(ellipse at 15% 5%, #263773 0, transparent 45%),
+              radial-gradient(ellipse at 90% 85%, #34205b 0, transparent 40%), #0b1025;
+}
+.contenedor { max-width: 760px; margin: 0 auto; }
+.cabecera { text-align: center; margin-bottom: 26px; }
+.etiqueta { display: inline-block; padding: 7px 14px; border: 1px solid #485b8d; border-radius: 999px; color: #b9cbff; font-size: 11px; font-weight: 800; letter-spacing: .17em; }
+h1 { font-size: clamp(32px, 6vw, 52px); letter-spacing: -.04em; margin: 14px 0 6px; line-height: 1.12; }
+h1 span { color: #facc15; }
+.subtitulo { color: #b9c6e2; margin: 0; font-size: 16px; }
+.autor { color: #8998b8; font-size: 12px; margin: 10px 0 0; }
+.tarjeta-juego { background: #161f3b; border: 1px solid #344466; border-radius: 22px; padding: 16px; box-shadow: 0 22px 60px #03071980; }
+.barra-superior { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin: 0 2px 14px; font-size: 11px; color: #b5c3df; }
+.indicador { font-weight: 800; letter-spacing: .07em; }
+.punto { display: inline-block; width: 8px; height: 8px; margin-right: 5px; border-radius: 50%; background: #34d399; box-shadow: 0 0 10px #34d399; }
+.marco-canvas { display: flex; justify-content: center; overflow: hidden; border: 2px solid #5476b3; border-radius: 14px; background: #111827; }
+canvas { display: block; width: 100%; max-width: 600px; height: auto; aspect-ratio: 3 / 2; background: #111827; }
+.panel { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 14px; }
+.dato { display: flex; align-items: center; justify-content: center; gap: 15px; min-height: 78px; padding: 12px; border-radius: 14px; border: 1px solid #344466; background: #202c4b; }
+.dato-icono { font-size: 26px; }
+.dato-titulo { display: block; color: #aebfdf; font-size: 11px; letter-spacing: .12em; font-weight: 800; }
+.dato strong { display: block; font-size: 29px; line-height: 1.15; }
+.seccion-controles { text-align: center; margin-top: 24px; }
+h2 { margin: 0 0 14px; font-size: 17px; }
+.botones { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.botones button { font: inherit; font-size: 14px; font-weight: 700; color: #f8fafc; background: #26385e; border: 1px solid #4b6699; border-radius: 11px; padding: 13px 17px; cursor: pointer; transition: background .2s, transform .2s, border-color .2s; }
+.botones button:hover { background: #365181; border-color: #8ab5ff; transform: translateY(-2px); }
+.botones button:active { transform: translateY(0); }
+.botones button:focus-visible { outline: 3px solid #facc15; outline-offset: 3px; }
+.botones .boton-reiniciar { background: #eab308; border-color: #fde047; color: #172033; }
+.botones .boton-reiniciar:hover { background: #fde047; }
+footer { text-align: center; color: #7485a8; font-size: 11px; letter-spacing: .14em; margin-top: 32px; }
+@media (max-width: 520px) {
+  body { padding: 22px 10px; }
+  .tarjeta-juego { padding: 10px; border-radius: 16px; }
+  .instruccion { display: none; }
+  .botones button { flex: 1 1 42%; padding: 13px 8px; }
+  .botones .boton-reiniciar { flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) { .botones button { transition: none; } }

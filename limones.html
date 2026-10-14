@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1025">
+  <title>Atrapar Limones | Minijuego</title>
+  <link rel="stylesheet" href="limones.css">
+  <script src="limones.js" defer></script>
+</head>
+<body onload="cargarInicio()">
+  <main class="contenedor">
+    <header class="cabecera">
+      <span class="etiqueta">MINIJUEGO · ARCADE</span>
+      <h1>🍋 Atrapar <span>Limones</span></h1>
+      <p class="subtitulo">Si del cielo te caen limones... ¡atrápalos!</p>
+      <p class="autor">Creado por HFMC</p>
+    </header>
+
+    <section class="tarjeta-juego" aria-label="Área del videojuego">
+      <div class="barra-superior">
+        <span class="indicador"><span class="punto"></span> PARTIDA EN CURSO</span>
+        <span class="instruccion">¡No dejes caer los limones!</span>
+      </div>
+      <div class="marco-canvas">
+        <canvas id="areaJuego" width="600" height="400" aria-label="Zona de juego Atrapar Limones">
+          Tu navegador no admite Canvas.
+        </canvas>
+      </div>
+
+      <div class="panel" aria-label="Estadísticas de la partida">
+        <div class="dato">
+          <span class="dato-icono" aria-hidden="true">🏆</span>
+          <div><span class="dato-titulo">PUNTAJE</span><strong id="txtPuntaje" aria-live="polite">0</strong></div>
+        </div>
+        <div class="dato">
+          <span class="dato-icono" aria-hidden="true">❤️</span>
+          <div><span class="dato-titulo">VIDAS</span><strong id="txtVidas" aria-live="polite">3</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion-controles" aria-label="Controles del juego">
+      <h2>Controles</h2>
+      <div class="botones">
+        <button type="button" onclick="moverIzquierda()">← Izquierda</button>
+        <button type="button" onclick="moverDerecha()">Derecha →</button>
+        <button type="button" onclick="bajarLimon()">↓ Bajar limón</button>
+        <button type="button" onclick="subirLimon()">↑ Subir limón</button>
+        <button type="button" class="boton-reiniciar" onclick="reiniciar()">↻ Reiniciar</button>
+      </div>
+    </section>
+    <footer>ATRAPAR LIMONES · HFMC</footer>
+  </main>
+</body>
+</html>
